@@ -140,8 +140,8 @@ The notebook generates several diagnostic plots, which can be exported (e.g., to
 - **Position vs Time**
 ![Position vs Time](figures/position_vs_time.png)
 
-- **Speed vs Time**
-![Speed vs Time](figures/speed_vs_time.png)
+- **Velocity vs Time**
+![Velociy vs Time](figures/velocity_vs_time.png)
 
 
 - **Acceleration vs Time**
