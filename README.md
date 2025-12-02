@@ -135,7 +135,7 @@ These values are broadly consistent with public descriptions of New Shepard flig
 
 ## 5. Figures
 
-The notebook generates several diagnostic plots, which can be exported (e.g., to a `figures/` directory) using `matplotlib.pyplot.savefig`:
+The notebook generates several diagnostic plots, which can be exported (e.g. to a `figures/` directory) using `matplotlib.pyplot.savefig`:
 
 - **Position vs Time**
   
