@@ -1,4 +1,4 @@
-# Blue Origin Suborbital Trajectory Simulation (Physics 360 Final Project)
+# Blue Origin Suborbital Trajectory Simulation in 2D (Physics 360 Final Project)
 
 This repository implements a numerical simulation of a Blue Origin–style suborbital ascent, coast, and descent trajectory, calibrated using publicly available parameters from the New Shepard flight on April 14, 2025. The simulation solves the coupled equations of motion for a vertically launched rocket with variable mass, atmospheric drag, and altitude-dependent gravity, and reproduces key characteristics of an ~11-minute suborbital flight to the Karman line.
 
@@ -22,13 +22,27 @@ This project demonstrates how undergraduate-level physics and numerical methods 
 
 ## 2. Physical Model
 
-The rocket is modeled as a point mass moving in the vertical direction \( y(t) \). The governing equation of motion is
+The rocket is modeled as a point mass moving in the horizontal and vertical direction \( x(t) and y(t) \). The governing equation of motion is
+
+Newton's Second Law:
 
 $$
-m(t)\frac{dv}{dt} = T(t) - D(v,h) - m(t)g(h)
+m_{\rm cap}\,\frac{d^2 \vec{r}}{dt^2}
+\;=\;
+\underbrace{F(t)\,\hat{\jmath}}_{\displaystyle\mathbf F_{\rm thrust}}
+\;+\;
+\underbrace{\Bigl(-\tfrac12\,\rho(h)\,C_D\,A\,|\mathbf v|\,\mathbf v\Bigr)}_{\mathbf F_{\rm drag}}
+\;+\;
+\underbrace{\Bigl(+\tfrac12\,\rho(h)\,C_L\,A\,|\mathbf v|^2\,\hat{\jmath}\Bigr)}_{\mathbf F_{\rm lift}}
+\;+\;
+\underbrace{\Bigl(0,\,-m_{\rm cap}\,g(h)\Bigr)}_{\mathbf F_{\rm grav}}.
 $$
 
-where $m_{\text{prop}}(t)$ decreases linearly during the burn phase and is constant thereafter (booster separation / burnout).
+$$
+m_{\text{cap}} \frac{d^2 \vec{r}}{dt^2} = \vec{F}_{\text{thrust}} + G \cdot \frac{m_{\text{cap}}\,m_E}{(R_E + h)^2} - \frac{1}{2} \rho(h) C A v^2 + \vec{F}_{\text{lift}}
+$$
+
+$$ \vec{r}= \sqrt{x^2 + y^2}\ $$
 
 - $( m(t) )$ is the time-dependent mass (structure + propellant),
 - $( T(t) )$ is the thrust (nonzero during powered ascent, zero during coast and descent),
