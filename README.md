@@ -190,13 +190,7 @@ These values are broadly consistent with public descriptions of New Shepard flig
 
 ---
 
-## 6. Future Work
-
-In this simulation, engine cutoff and booster separation occur at the same time. However, in real suborbital flights, these events are separated by a short but important time interval. Future work will focus on identifying the actual duration between engine cutoff and booster separation to improve the accuracy and physical realism of the modeled trajectory. Incorporating a more precise staging timeline will allow for better calibration of velocity, altitude, and mass profiles during the ascent phase.
-
----
-
-## 7. Figures
+## 6. Figures
 
 - **Position vs Time**
   
@@ -206,10 +200,15 @@ In this simulation, engine cutoff and booster separation occur at the same time.
 
 ![Velociy vs Time](figures/velocity_vs_time.png)
 
-
 - **Acceleration vs Time**
 
 ![Acceleration vs Time](figures/acceleration_vs_time.png)
+
+---
+
+## 7. Future Work
+
+In this simulation, engine cutoff and booster separation occur at the same time. However, in real suborbital flights, these events are separated by a short but important time interval. Future work will focus on identifying the actual duration between engine cutoff and booster separation to improve the accuracy and physical realism of the modeled trajectory. Incorporating a more precise staging timeline will allow for better calibration of velocity, altitude, and mass profiles during the ascent phase.
 
 ---
 
